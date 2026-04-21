@@ -10,7 +10,7 @@ def test_api_with_kaggle(n_samples):
     csv_path = os.path.join(path, "data.csv")
     df = pd.read_csv(csv_path)
 
-    # 2. Configuración de la URL de tu API (donde corre uvicorn)
+    # 2. Configuración de la URL de API 
     API_URL = "http://127.0.0.1:8000/predict"
     
     # 3. Selección de muestra aleatoria
@@ -25,13 +25,12 @@ def test_api_with_kaggle(n_samples):
 
         # 4. Petición HTTP POST a la API
         try:
-            # Enviamos el JSON que espera tu clase TextRequest en FastAPI
             response = requests.post(API_URL, json={"sentence": sentence})
             
             if response.status_code == 200:
                 api_response = response.json()
                 comparison_results.append({
-                    "Sentence": sentence[:60] + "...", # Recortamos para que quepa en la tabla
+                    "Sentence": sentence[:60] + "...",
                     "Real (Kaggle)": real_label,
                     "API_Predict": api_response["sentiment"],
                     "Conf %": api_response["confidence"]
@@ -49,7 +48,6 @@ def test_api_with_kaggle(n_samples):
         print("\n" + "="*100)
         print(" RESULTADOS DE LA API vs KAGGLE")
         print("="*100)
-        # Ajustamos el ancho de pandas 
         pd.set_option('display.max_colwidth', None)
         print(results_df.to_string(index=False))
         print("="*100)
