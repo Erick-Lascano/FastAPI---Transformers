@@ -30,7 +30,7 @@ def train_model():
         output_dir=DRIVE_SAVE_PATH,     
         per_device_train_batch_size=config.BATCH_SIZE,
         num_train_epochs=config.EPOCHS,
-        evaluation_strategy="epoch",
+        eval_strategy="epoch",
         save_strategy="epoch",
         learning_rate=config.LEARNING_RATE,
         load_best_model_at_end=True,
