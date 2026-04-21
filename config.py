@@ -1,0 +1,5 @@
+MODEL_NAME = "distilbert-base-uncased"
+MAX_LENGTH = 128
+NUM_LABELS = 2
+BATCH_SIZE = 16
+LEARNING_RATE = 2e-5
