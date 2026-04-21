@@ -34,7 +34,7 @@ def train_model():
         save_strategy="epoch",
         learning_rate=config.LEARNING_RATE,
         load_best_model_at_end=True,
-        fp16=True  # Magia para GPU
+        fp16=True  
     )
 
     trainer = Trainer(
@@ -51,7 +51,7 @@ def train_model():
     model.save_pretrained(DRIVE_SAVE_PATH)
     tokenizer.save_pretrained(DRIVE_SAVE_PATH)
     
-    print(f"¡Éxito! Tu modelo ya vive en tu Google Drive: {DRIVE_SAVE_PATH}")
+    print(f"Tu modelo ya vive en tu Google Drive: {DRIVE_SAVE_PATH}")
 
 if __name__ == "__main__":
     train_model()
