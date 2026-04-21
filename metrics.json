@@ -3,10 +3,10 @@
   "evaluation_date": "2026-04-20",
   "dataset_source": "sbhatti/financial-sentiment-analysis",
   "metrics": {
-    "total_rows_analyzed": 5842,
-    "total_discrepancies": 832,
-    "disagreement_rate": 0.1424,
-    "accuracy": 0.8576
+    "total_rows_analyzed": 1169,
+    "total_discrepancies": 227,
+    "disagreement_rate": 0.1942,
+    "accuracy": 0.8058
   },
   "status": "success"
 }
