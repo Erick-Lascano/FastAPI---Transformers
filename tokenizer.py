@@ -6,7 +6,7 @@ def load_tokenizer(model_name: str):
 def tokenize(text, tokenizer, max_length=128):
     return tokenizer(
         text,
-        padding=True,
+        padding='max_length', 
         truncation=True,
         max_length=max_length,
         return_tensors="pt"
