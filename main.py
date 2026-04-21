@@ -2,6 +2,9 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from src.api.model_loader import load_trained_model
 from src.api.inference import get_prediction
+import uvicorn
+import os
+import sys
 
 app = FastAPI(title="Financial Sentiment API")
 
@@ -24,3 +27,6 @@ def predict(request: TextRequest):
         "sentiment": sentiment,
         "confidence": f"{confidence:.2%}"
     }
+    
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
