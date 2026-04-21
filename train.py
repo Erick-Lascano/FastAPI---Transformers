@@ -35,6 +35,7 @@ def train_model():
         learning_rate=config.LEARNING_RATE,
         load_best_model_at_end=True,
         fp16=True  # Magia para GPU
+    )
 
     trainer = Trainer(
         model=model,
