@@ -1,14 +1,8 @@
 fastapi
 uvicorn
-
 torch
 transformers
-datasets
-scikit-learn
-
+sentencepiece
+protobuf
 pandas
-numpy
-
-kagglehub
-
-pydantic
+scikit-learn

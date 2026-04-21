@@ -1,80 +1,55 @@
 # =========================
-# Python
+# Python & Environment
 # =========================
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
+*$py.class
 .Python
-*.so
-# virtual environment
-venv/
-.venv/
-
-# PyTorch / ML artifacts
-*.bin
-*.pt
-*.pth
-*.dylib
-
-# virtual environments
 venv/
 env/
+.env
 .venv/
 
 # =========================
-# Jupyter / Colab
+# IDEs & OS
 # =========================
-.ipynb_checkpoints/
-*.ipynb
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
 
 # =========================
-# Environment variables
+# ML / Model Artifacts (PESADOS)
 # =========================
-.env
+# Ignoramos las carpetas con los pesos del modelo
+fin_sentiment_model/
+model_output/
+final_model/
+checkpoint-*/
+runs/
 
-# =========================
-# ML / Model artifacts
-# =========================
-models/
+# Ignoramos archivos de modelos sueltos
 *.bin
 *.pt
 *.pth
 *.ckpt
 *.safetensors
+*.joblib
 
 # HuggingFace cache
 .cache/
 huggingface/
 
 # =========================
-# Data (Kaggle / datasets)
+# Data & Datasets
 # =========================
+# Ignoramos el CSV de Kaggle porque es pesado y se descarga con el script
+data.csv
 data/
 datasets/
-*.csv
-*.parquet
-
-# =========================
-# Logs
-# =========================
-*.log
-
-# =========================
-# OS files
-# =========================
-.DS_Store
-Thumbs.db
-
-# =========================
-# IDEs
-# =========================
-.vscode/
-.idea/
-
-# =========================
-# Git large files
-# =========================
+.kaggle/
 *.zip
 *.tar
 *.gz
+audit_api.py
+
