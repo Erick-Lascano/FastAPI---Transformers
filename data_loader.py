@@ -4,6 +4,9 @@ import torch
 from torch.utils.data import Dataset
 from sklearn.model_selection import train_test_split
 
+# Importamos tu función personalizada
+from tokenizer import tokenize 
+
 class FinancialDataset(Dataset):
     """
     Clase que envuelve los datos para PyTorch. 
@@ -22,14 +25,8 @@ class FinancialDataset(Dataset):
         text = str(self.texts[idx])
         label = self.labels[idx]
         
-        # Tokenización: convierte texto en IDs que el modelo entiende
-        encoding = self.tokenizer(
-            text,
-            truncation=True,
-            padding='max_length',
-            max_length=self.max_length,
-            return_tensors='pt'
-        )
+        # Utilizamos tu función del archivo tokenizer.py
+        encoding = tokenize(text, self.tokenizer, self.max_length)
         
         return {
             'input_ids': encoding['input_ids'].flatten(),
@@ -53,20 +50,14 @@ def prepare_data(dataset_path: str, tokenizer, max_length: int = 128):
     df = pd.read_csv(full_path)
     
     # 2. Limpieza y Mapeo de Etiquetas
-    # El dataset de Kaggle usa 'Sentiment' y 'Sentence'
-    # Mapeo: negative -> 0, neutral -> 1, positive -> 2
     sentiment_map = {'negative': 0, 'neutral': 1, 'positive': 2}
     
-    # Aseguramos que los nombres de las columnas coincidan (por si hay variaciones de capitalización)
     df.columns = [c.lower() for c in df.columns]
     
     if 'sentiment' not in df.columns or 'sentence' not in df.columns:
         raise ValueError("El CSV debe contener las columnas 'sentence' y 'sentiment'")
 
-    # Convertir etiquetas de texto a números
     df['label'] = df['sentiment'].str.lower().map(sentiment_map)
-    
-    # Eliminar posibles nulos
     df = df.dropna(subset=['label', 'sentence'])
     
     # 3. División de datos (80% entrenamiento, 20% validación)
