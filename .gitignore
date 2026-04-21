@@ -20,3 +20,25 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+
+# Entorno virtual
+venv/
+env/
+.env
+
+# Archivos de Python (caché)
+__pycache__/
+*.pyc
+
+# EL MODELO ENTRENADO (Muy pesado para Git)
+fin_sentiment_model/
+model_output/
+final_model/
+
+# Datos descargados
+data.csv
+.kaggle/
+
+# Logs y checkpoints de entrenamiento
+runs/
+checkpoint-*/
