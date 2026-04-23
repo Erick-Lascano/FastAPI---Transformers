@@ -22,19 +22,19 @@ Thumbs.db
 # ML / Model Artifacts (PESADOS)
 # =========================
 # Ignoramos las carpetas con los pesos del modelo
-#fin_sentiment_model/
-#model_output/
-#final_model/
-#checkpoint-*/
-#runs/
+fin_sentiment_model/
+model_output/
+final_model/
+checkpoint-*/
+runs/
 
 # Ignoramos archivos de modelos sueltos
-#*.bin
-#*.pt
-#*.pth
-#*.ckpt
-#*.safetensors
-#*.joblib
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.joblib
 
 # HuggingFace cache
 #.cache/
