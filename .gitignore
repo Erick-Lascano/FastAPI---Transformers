@@ -37,8 +37,8 @@ runs/
 *.joblib
 
 # HuggingFace cache
-#.cache/
-#huggingface/
+.cache/
+huggingface/
 
 # =========================
 # Data & Datasets
