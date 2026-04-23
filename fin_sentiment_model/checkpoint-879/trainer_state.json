@@ -1,0 +1,65 @@
+{
+  "best_global_step": 586,
+  "best_metric": 0.437377393245697,
+  "best_model_checkpoint": "/content/drive/MyDrive/fin_sentiment_model/checkpoint-586",
+  "epoch": 3.0,
+  "eval_steps": 500,
+  "global_step": 879,
+  "is_hyper_param_search": false,
+  "is_local_process_zero": true,
+  "is_world_process_zero": true,
+  "log_history": [
+    {
+      "epoch": 1.0,
+      "eval_loss": 0.4509616792201996,
+      "eval_runtime": 1.5484,
+      "eval_samples_per_second": 754.996,
+      "eval_steps_per_second": 94.94,
+      "step": 293
+    },
+    {
+      "epoch": 1.7064846416382253,
+      "grad_norm": 16.469444274902344,
+      "learning_rate": 8.64618885096701e-06,
+      "loss": 0.5490709838867187,
+      "step": 500
+    },
+    {
+      "epoch": 2.0,
+      "eval_loss": 0.437377393245697,
+      "eval_runtime": 1.5336,
+      "eval_samples_per_second": 762.261,
+      "eval_steps_per_second": 95.853,
+      "step": 586
+    },
+    {
+      "epoch": 3.0,
+      "eval_loss": 0.4503783583641052,
+      "eval_runtime": 1.6712,
+      "eval_samples_per_second": 699.478,
+      "eval_steps_per_second": 87.958,
+      "step": 879
+    }
+  ],
+  "logging_steps": 500,
+  "max_steps": 879,
+  "num_input_tokens_seen": 0,
+  "num_train_epochs": 3,
+  "save_steps": 500,
+  "stateful_callbacks": {
+    "TrainerControl": {
+      "args": {
+        "should_epoch_stop": false,
+        "should_evaluate": false,
+        "should_log": false,
+        "should_save": true,
+        "should_training_stop": true
+      },
+      "attributes": {}
+    }
+  },
+  "total_flos": 464273394948864.0,
+  "train_batch_size": 16,
+  "trial_name": null,
+  "trial_params": null
+}

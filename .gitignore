@@ -23,10 +23,10 @@ Thumbs.db
 # =========================
 # Ignoramos las carpetas con los pesos del modelo
 #fin_sentiment_model/
-model_output/
-final_model/
-checkpoint-*/
-runs/
+#model_output/
+#final_model/
+#checkpoint-*/
+#runs/
 
 # Ignoramos archivos de modelos sueltos
 *.bin
