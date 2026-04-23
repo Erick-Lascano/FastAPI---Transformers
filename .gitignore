@@ -29,12 +29,12 @@ Thumbs.db
 #runs/
 
 # Ignoramos archivos de modelos sueltos
-*.bin
-*.pt
-*.pth
-*.ckpt
-*.safetensors
-*.joblib
+#*.bin
+#*.pt
+#*.pth
+#*.ckpt
+#*.safetensors
+#*.joblib
 
 # HuggingFace cache
 .cache/
