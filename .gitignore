@@ -43,7 +43,7 @@ huggingface/
 # =========================
 # Data & Datasets
 # =========================
-# Ignoramos el CSV de Kaggle porque es pesado y se descarga con el script
+# Ignoramos el CSV de Kaggle 
 data.csv
 data/
 datasets/

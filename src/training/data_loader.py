@@ -4,7 +4,7 @@ import torch
 from torch.utils.data import Dataset
 from sklearn.model_selection import train_test_split
 
-# Importamos tu función personalizada
+# Importamos la función tokenize
 from tokenizer import tokenize 
 
 class FinancialDataset(Dataset):

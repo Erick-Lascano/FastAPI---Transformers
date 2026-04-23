@@ -53,4 +53,4 @@ def test_api_with_kaggle(n_samples):
         print("="*100)
 
 if __name__ == "__main__":
-    test_api_with_kaggle(n_samples=22)
+    test_api_with_kaggle(n_samples=10)
