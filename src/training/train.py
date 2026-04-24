@@ -33,6 +33,7 @@ def train_model():
         eval_strategy="epoch",
         save_strategy="no",
         learning_rate=config.LEARNING_RATE,
+        load_best_model_at_end=False,
         save_total_limit=1,
         fp16=True  # GPU
     )
