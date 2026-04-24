@@ -50,7 +50,7 @@ Se implementó una división de datos (`train_test_split`) con una semilla fija 
 
 
 ## 🛠️ Tecnologías Utilizadas
-* **Python+**
+* **Python**
 * **Hugging Face Transformers**: Para el manejo del modelo pre-entrenado.
 * **FastAPI / Uvicorn**: Para el servicio de API REST.
 * **PyTorch**: Como motor de tensores y optimización.
@@ -61,6 +61,8 @@ Se implementó una división de datos (`train_test_split`) con una semilla fija 
 ### Equipo 1:
 
 Erick Isaac Lascano Otañez - A00836571
+
+Luis Fernando Alcazar Díaz - A00836287
 
 Pedro Soto Juárez - A00837560
 
