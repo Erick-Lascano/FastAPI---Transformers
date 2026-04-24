@@ -6,14 +6,14 @@ from data_loader import prepare_data
 from tokenizer import load_tokenizer
 
 def train_model():
-    # Ruta donde se guardará en tu Google Drive
+    # Ruta donde se guardará en Google Drive
     DRIVE_SAVE_PATH = "/content/drive/MyDrive/fin_sentiment_model"
     
     print("1. Descargando datos de Kaggle...")
     csv_path = download_dataset()
 
     print("2. Cargando tokenizador...")
-    # Usamos tu nuevo archivo tokenizer.py
+    # Usar archivo tokenizer.py
     tokenizer = load_tokenizer(config.MODEL_NAME)
 
     print("3. Preparando datos...")
@@ -34,7 +34,8 @@ def train_model():
         save_strategy="epoch",
         learning_rate=config.LEARNING_RATE,
         load_best_model_at_end=True,
-        fp16=True  # Magia para GPU
+        save_total_limit=1,
+        fp16=True  # GPU
     )
 
     trainer = Trainer(

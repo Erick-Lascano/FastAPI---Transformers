@@ -1,6 +1,6 @@
 # FastAPI---Transformers
 
-## 📬 Autor
+## Autores
  Proyecto desarrollado para el módulo de Cloud Computing.
 
 ### Equipo 1:
