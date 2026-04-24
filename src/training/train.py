@@ -31,9 +31,8 @@ def train_model():
         per_device_train_batch_size=config.BATCH_SIZE,
         num_train_epochs=config.EPOCHS,
         eval_strategy="epoch",
-        save_strategy="epoch",
+        save_strategy="no",
         learning_rate=config.LEARNING_RATE,
-        load_best_model_at_end=True,
         save_total_limit=1,
         fp16=True  # GPU
     )

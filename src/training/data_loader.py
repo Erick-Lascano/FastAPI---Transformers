@@ -25,7 +25,7 @@ class FinancialDataset(Dataset):
         text = str(self.texts[idx])
         label = self.labels[idx]
         
-        # Utilizamos tu función del archivo tokenizer.py
+        # Utilizamos la función del archivo tokenizer.py
         encoding = tokenize(text, self.tokenizer, self.max_length)
         
         return {
