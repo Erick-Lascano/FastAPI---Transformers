@@ -22,7 +22,6 @@ Thumbs.db
 # ML / Model Artifacts (PESADOS)
 # =========================
 # Ignoramos las carpetas con los pesos del modelo
-fin_sentiment_model/
 model_output/
 final_model/
 checkpoint-*/

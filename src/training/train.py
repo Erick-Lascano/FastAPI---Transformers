@@ -1,13 +1,22 @@
 import os
+import sys
+
+# 1. Forzar a Python a encontrar la raíz del proyecto
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+if BASE_DIR not in sys.path:
+    sys.path.insert(0, BASE_DIR)
+
 from transformers import Trainer, TrainingArguments, AutoModelForSequenceClassification
-import config
-from data_extractor import download_dataset
-from data_loader import prepare_data
-from tokenizer import load_tokenizer
+
+# 2. Importación absoluta para evitar conflictos con módulos del sistema
+from src import config 
+from src.training.data_extractor import download_dataset
+from src.training.data_loader import prepare_data
+from src.training.tokenizer import load_tokenizer
 
 def train_model():
     # Ruta donde se guardará en Google Drive
-    DRIVE_SAVE_PATH = "/content/drive/MyDrive/fin_sentiment_model"
+    DRIVE_SAVE_PATH = "./fin_sentiment_model"
     
     print("1. Descargando datos de Kaggle...")
     csv_path = download_dataset()
