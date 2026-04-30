@@ -38,7 +38,7 @@ runs/
 # HuggingFace cache
 .cache/
 huggingface/
-
+fin_sentiment_model/
 # =========================
 # Data & Datasets
 # =========================
